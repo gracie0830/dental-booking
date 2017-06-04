@@ -1,10 +1,12 @@
 <?php
 	
+        $title = "DenTEETH";
+        include('header-login.html');
 	$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
 
 	if (!$db){
 		die("Connection failed: " . mysqli_connect_error());
-	}
+        }
 		if(isset($_POST['book_btn']))
 		{
 			$bookdate = $_POST['bookdate'];
@@ -18,7 +20,7 @@
 			//$_SESSION['login_btn'] = true;
 			if ($today < $bookdate)
 			{
-			echo	$sql = "INSERT INTO `appointments`(userID, reservationDateTime, schedDate, schedTime, service, status) VALUES
+				$sql = "INSERT INTO `appointments`(userID, reservationDateTime, schedDate, schedTime, service, status) VALUES
 				($userID,'$dttoday', '$bookdate', '$booktime', '$services', '')";
 				$result = mysqli_query($db, $sql); 
 				header("location:l-appointment.php");  //redirect appointment page
@@ -33,8 +35,6 @@
 
 <html !DOCTYPE HTML>
 <?php
-$title = "DenTEETH";
-		include('header-login.html');
 ?>
 
 <body id="reg">
