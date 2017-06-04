@@ -1,0 +1,75 @@
+<?php
+session_start();
+//connect to database
+	$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
+	if(isset($_POST['login_btn']))
+	{
+	    $username = ($_POST['username']);
+	    $password = ($_POST['password']);
+	    $password = md5($password); //Remember we hashed password before storing last time
+	        $sql = "SELECT * FROM users WHERE username ='$username' AND password ='$password'";
+	   
+    		$result = mysqli_query($db,$sql);
+	        if(mysqli_num_rows($result) == 1){
+		        $_SESSION['username'] = $username;
+		        $_SESSION['login'] = true;
+		        header("location:home.php?user=$username");
+    		}
+    	
+      else{
+          $_SESSION['message']="Username and Password combination is incorrect";
+      }
+    }
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><?php echo $title; ?></title>	
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div id="wrap"><!--start wrap here-->
+
+<div id="header"><!--start wrap here-->
+	<div id="logo"><!--start logo here-->
+	<a href="#"><img src="images\logo.jpg" /></a>
+	</div><!--end logo here-->
+	
+	<div id="header-right"><!--start header-right here-->
+		<div class="top"><!--start top here-->
+			<p>Call us:   <span> 0910 - 123 - 4567 </span></p>
+		</div><!--end top here-->
+
+		<div class="bottom"><!--start bottom here-->
+		<p class="bottom-in">
+			<form action="./l-search.php" method="get" class="searchform">
+			<input type="text" name="search" dir= "ltr" placeholder="search..." class="search-in" />
+			<input type="image" src="images/search.png" class="search-img">
+			</form>
+		</p>
+
+		<p class="user_name">
+			Welcome <?php echo "<span class= 'user_naName'>" . $_SESSION['username'] . "</span>"; ?>
+		</p>
+		
+		</div><!--end bottom here-->
+	</div><!--end header-right here-->
+</div><!--end header here-->
+
+<div id="navigation"><!--start navigation here-->
+	<ul class="left-nav">
+			<li><a href="home.php?user=<?php echo $_SESSION['username']; ?>">Home</a></li>
+			<li><a href="l-services.php?user=<?php echo $_SESSION['username']; ?>">Services</a></li>
+			<li><a href="l-appointment.php?user=<?php echo $_SESSION['username']; ?>">Appointments</a></li>
+			<li><a href="l-facilities.php?user=<?php echo $_SESSION['username']; ?>">Facilities</a></li>
+	</ul>
+	<ul class="box">
+			<li><a class="button" href="logout.php">Logout</a></li>
+	</ul>
+
+</div><!--end navigation here-->
+
+	<div id="content"><!-- Start of the page-specific content. -->
+<!-- Script 3.2 - header.html -->

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><?php echo $title; ?></title>	
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<meta http-equiv="content-type" name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div id="wrap"><!--start wrap here-->
+
+<div id="header"><!--start wrap here-->
+	<div id="logo"><!--start logo here-->
+	<a href="#"><img src="images\logo.jpg" /></a>
+	</div><!--end logo here-->
+	
+	<div id="header-right"><!--start header-right here-->
+		<div class="top"><!--start top here-->
+			<p>Call us:   <span> 0910 - 123 - 4567 </span></p>
+		</div><!--end top here-->
+
+		<div class="bottom"><!--start bottom here-->
+		<p class="bottom-in">
+			<form action="./search.php" method="get" class="searchform">
+			<input type="text" name="q" dir= "ltr" placeholder="search for services..." class="search-in" />
+			<input type="image" src="images/search.png" class="search-img" name="search_btn">
+			</form>
+		</p>
+		
+		</div><!--end bottom here-->
+	</div><!--end header-right here-->
+</div><!--end header here-->
+
+<div id="navigation"><!--start navigation here-->
+	<ul class="left-nav">
+			<li><a href="index.php">Home</a></li>
+			<li><a href="services.php">Services</a></li>
+			<li><a href="appointment.php">Appointments</a></li>
+			<li><a href="facilities.php">Facilities</a></li>
+	</ul>
+	<ul class="box">
+			<li><a class="button" href="registration.php">Sign up</a></li>
+			<li><a class="button" href="login.php">Log in</a></li>
+	</ul>
+
+	<div id="signup" class="overlay">
+	<div class="popup">
+		<h1>Register Now</h1>
+		<h2>Don't have an account?</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+
+	<form action="sign_handle.php" method="POST" class="signup">
+	<p class="pass">
+		<label>Given Name</label><br>
+		<input type="text" name="gname" class="reg-in" required>
+	</p>
+
+	<p>
+		<label>Last Name</label><br>
+		<input type="text" name="lname" class="reg-in" required>
+	</p>
+
+	<p class="b-right">
+	<input type="radio" name="gender" value="F"/>Female
+	<input type="radio" name="gender" value="M"/>Male
+	</p>
+
+	<p>
+		<label>Birthdate</label><br>
+		<input type="date" name="birthdate" class="reg-in" required>
+	</p>
+
+	<p class="pass">
+		<label>Contact Number</label><br>
+		<input type="tel" name="contactNum" class="reg-in" required>
+	</p>
+
+	<p>
+		<label>Address</label><br>
+		<input type="text" name="address" class="reg-in" required>
+	</p>
+
+	<p class="pass">
+		<label>Username</label><br>
+		<input type="text" name="username" class="reg-in" required>
+	</p>
+
+	<p>
+		<label>Email Address</label><br>
+		<input type="text" name="email" class="reg-in" required>
+	</p>
+
+	<p class="pass">
+		<label>Password</label><br>
+		<input type="password" name="password" class="reg-in" required>
+	</p>
+
+	<p>
+		<label><b>Confirm Password</b></label><br>
+		<input type="password" name="cpassword" class="reg-in" required>
+	</p>
+
+	<p class="reg-in">
+	<input type="submit" value="Submit" class="signup-sub">
+	</p>
+	
+	</form>
+
+	<hr>
+	<p class="reg-label">
+		<label>Already have an account?</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<a class="button-log" href="#login">Log in</a>
+	</p>
+		</div>
+	</div>
+</div>
+
+<div id="login" class="overlay">
+	<div class="popup2">
+		<h1>Log In Here</h1>
+		<h2>Already have an account?</h2>
+		<a class="close" href="#">&times;</a>
+	<div class="content">
+
+		<form action="log_handle.php" method="POST" class="signup">
+			<p>
+				<label>Username</label><br>
+				<input type="text" name="username" class="reg-in" required>
+			</p>
+
+			<p>
+				<label>Password</label><br>
+				<input type="password" name="password" class="reg-in" required>
+			</p>
+
+			<p>
+			<input type="submit" value="Submit" class="signup-sub">
+			</p>
+
+		</form>
+
+	<hr>
+			<p class="reg-label">
+				<label>Create an account</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<a class="button-log" href="#signup">Sign Up</a>
+			</p>
+	</div>
+	</div>
+</div>
+</div><!--end navigation here-->
+
+	<div id="content"><!-- Start of the page-specific content. -->
+<!-- Script 3.2 - header.html -->
