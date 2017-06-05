@@ -1,17 +1,12 @@
-<?php
-		//connect to database
-		$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
-?>
-
 <html !DOCTYPE HTML>
-<?php
-		$title = "DenTEETH";
-		include('header-login.html');
-?>
-
 <body>
 
-<?php
+    <?php
+    $title = "DenTEETH";
+    include('header-login.html');
+	//connect to database
+	$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
+
 	if(isset($_GET['q']) && $_GET['q'] !== '')
 	{
 		$searchq = $_GET['q'];
@@ -37,7 +32,7 @@
 		}
 	}
 	else{
-		header("location:./");
+		header("location: ./");
 	}
 	print($output);
 ?>

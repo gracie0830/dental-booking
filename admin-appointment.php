@@ -24,9 +24,9 @@
 		Appointments:
 	</p>
 	
-	<div class="buttons-app">
-		<button class="app-but"><a href="l-book.php" class="app-but">Book Appointment</a></button>
-	</div>
+	<!--<div class="buttons-app">
+		<button class="app-but"><a href="a-book.php" class="app-but">Book Appointment</a></button>
+	</div>-->
 
 	<table width="800" border="1" cellpadding="1" cellspacing="1">
 		<tr>

@@ -46,7 +46,7 @@
 					$result = mysqli_query($db, $sql); 
 					$_SESSION['message'] = "You are now registered!";
 					$_SESSION['username'] = $username;
-					//header("location:index.php");  //redirect home page
+					header("location:login.php");  //redirect home page
 				}
 				else{
 					$_SESSION['message'] = "The two passwords do not match";		

@@ -1,17 +1,12 @@
-<?php
-		//connect to database
-		$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
-?>
-
 <html !DOCTYPE HTML>
+    <body>
 <?php
-		$title = "DenTEETH";
-		include('header.html');
-?>
+    $title = "DenTEETH";
+    include('header.html');
+	//connect to database
+	$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
+		
 
-<body>
-
-<?php
 	if(isset($_GET['q']) && $_GET['q'] !== '')
 	{
 		$searchq = $_GET['q'];
@@ -19,7 +14,7 @@
 		$output='';
 		$results = mysqli_query($db, $sql);
 	
-		if (count($results) == 0){
+		if (mysqli_num_rows($results) == 0){
 			$output .= 'No search results for <b>"' . $searchq . '"</b>';
 		}
 		else{

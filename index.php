@@ -4,7 +4,7 @@
 	<?php
 		$title = "DenTEETH";
 		include('header.html');
-		include('slider.php');
+		include('slider2.php');
 	?>
 
 <h1>Welcome to DENTEETH!</h1>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2017 at 06:26 PM
+-- Generation Time: Jun 05, 2017 at 07:11 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -60,10 +60,14 @@ CREATE TABLE `appointments` (
 --
 
 INSERT INTO `appointments` (`ID`, `userID`, `reservationDateTime`, `schedDate`, `schedTime`, `service`, `status`) VALUES
-(69, '25', '2017-06-04 03:06 am', '2017-06-20', '4:00 PM', 'Bridges', 'cancelled'),
-(70, '25', '2017-06-04 04:06 am', '2017-06-21', '5:00 PM', 'Implants', ''),
-(68, '25', '2017-06-04 03:06 am', '2017-06-30', '9:00 AM', 'Tooth Extraction', ''),
-(66, '25', '2017-06-04 02:06 am', '2017-06-30', '4:00 PM', 'Implants', '');
+(76, '25', '2017-06-04 23:06 pm', '2017-06-22', '11:00 AM', 'Crowns', ''),
+(77, '25', '2017-06-04 23:06 pm', '2017-06-28', '11:00 AM', 'Root Canal', ''),
+(79, '25', '2017-06-05 00:06 am', '2017-09-01', '5:00 PM', 'Implants', ''),
+(78, '25', '2017-06-04 23:06 pm', '2017-06-28', '4:00 PM', 'Root Canal', ''),
+(75, '25', '2017-06-04 23:06 pm', '2017-07-08', '10:00 AM', 'Implants', ''),
+(73, '25', '2017-06-04 21:06 pm', '2017-06-21', '10:00 AM', 'Veneers', ''),
+(74, '25', '2017-06-04 22:06 pm', '2017-06-07', '10:00 AM', 'Bridges', ''),
+(80, '25', '2017-06-05 17:06 pm', '2017-06-10', '8:00 AM', 'Tooth Extraction', '');
 
 -- --------------------------------------------------------
 
@@ -120,7 +124,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`userID`, `givenName`, `lastName`, `gender`, `birthDate`, `contactNumber`, `address`, `username`, `emailAddress`, `password`) VALUES
 (28, 'shey', 'reynaldo', 'F', '1994-08-30', '12345678', 'Chicayab', 'xhei_xhei', 'xhei_xhei22@yahoo.com', '728f1833e9d46643c7341111a913e3a2'),
 (25, 'liezel grace', 'reynaldo', 'F', '1994-08-30', '09462717118', 'Sicayab, Dipolog City', 'xhei22', 'xhei_xhei2@yahoo.com', '827ccb0eea8a706c4c34a16891f84e7b'),
-(29, 'aaa', 'aaa', 'F', '2017-06-08', '12233', 'dsada', 'aaa', 'asdfghjg@y.com', '81dc9bdb52d04dc20036dbd8313ed055');
+(29, 'aaa', 'aaa', 'F', '2017-06-08', '12233', 'dsada', 'aaa', 'asdfghjg@y.com', '81dc9bdb52d04dc20036dbd8313ed055'),
+(30, 'bbb', 'bbb', 'M', '2017-06-14', 'bf ', 'ff', 'bbb', 'bbb', '08f8e0260c64418510cefb2b06eee5cd');
 
 --
 -- Indexes for dumped tables
@@ -165,7 +170,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
 -- AUTO_INCREMENT for table `search`
 --
@@ -175,7 +180,7 @@ ALTER TABLE `search`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `userID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
