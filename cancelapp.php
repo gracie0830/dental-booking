@@ -22,7 +22,7 @@ if (isset($_GET['ID']) && is_numeric($_GET['ID']))
 			$updatesql = "UPDATE appointments SET status = 'cancelled' WHERE ID = $_SESSION[id]";
 			$result = mysqli_query($db, $updatesql); 
 				//$_SESSION['message'] = "Your new schedule is dated on" . $_POST['reschedDate'] . "at" . $_POST['reschedTime'];
-				$_SESSION['username'] = $username;
+				
 
 echo "naay gwapo";
 

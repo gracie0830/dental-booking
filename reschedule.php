@@ -20,7 +20,7 @@
 			$result = mysqli_query($db, $updatesql); 
 
 				$_SESSION['message'] = "Your new schedule is dated on" . $_POST['reschedDate'] . "at" . $_POST['reschedTime'];
-				$_SESSION['username'] = $username;
+				
 				header("location:l-appointment.php?id=");  //redirect appointment page
 			}
 			else{	
