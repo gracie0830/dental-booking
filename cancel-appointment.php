@@ -7,7 +7,7 @@
 
 	//connect to database
 	$db = mysqli_connect("127.0.0.1", "root", "", "authentication");
-	$sql = "SELECT * FROM appointments where userID =".$_SESSION['user_id'];
+	$sql = "SELECT * FROM appointments where userID =".$_SESSION['user_id']. " ORDER BY schedDate";
 	$records = mysqli_query($db,$sql);
 ?>
 

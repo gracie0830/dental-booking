@@ -34,13 +34,11 @@
 ?>
 
 <html !DOCTYPE HTML>
-<?php
-?>
 
 <body id="reg">
-	<div id="book-form">
+	<div id="abook-form">
 
-	<div class="book-form">
+	<div class="abook-form">
 		<h1>Book Now</h1>
 		<form action="l-book.php" method="POST" class="bookform">
 		<?php
@@ -49,8 +47,38 @@
 			echo "<p class='today'>$today $ttime</p>";
 		?>
 
+	<p class="pass">
+		<label>Given Name</label><br>
+		<input type="text" name="gname" class="in" required>
+	</p>
+
 	<p>
-		<label>Date</label><br>
+		<label>Last Name</label><br>
+		<input type="text" name="lname" class="in" required>
+	</p>
+
+	<p class="b-right">
+	<input type="radio" name="gender" value="F"/>Female
+	<input type="radio" name="gender" value="M"/>Male
+	</p>
+
+	<p>
+		<label>Birthdate</label><br>
+		<input type="date" name="birthdate" class="in" required>
+	</p>
+
+	<p class="pass">
+		<label>Contact Number</label><br>
+		<input type="tel" name="contactNum" class="in" required>
+	</p>
+
+	<p>
+		<label>Address</label><br>
+		<input type="text" name="address" class="in" required>
+	</p>
+
+	<p class="b-right">
+		<label>Schedule Date</label><br>
 		<input type="date" name="bookdate" required>
 	</p>
 
@@ -103,7 +131,7 @@
 	?>
 
 	<p class="reg-in">
-	<input type="submit" value="Book Appointment" class="book-sub" name="book_btn">
+	<input type="submit" value="Book Appointment" class="abook-sub" name="book_btn">
 	</p>
 
 		</form>

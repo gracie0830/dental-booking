@@ -16,7 +16,7 @@
 			$dttoday = $today . " " . $ttime;
 
 			if ($reschedDate > $today){
-			$updatesql = "UPDATE appointments SET schedDate = '$reschedDate', schedTime = '$reschedTime' WHERE ID = ".$_SESSION['id'];
+			$updatesql = "UPDATE appointments SET schedDate = '$reschedDate', schedTime = '$reschedTime', status = 're-scheduled' WHERE ID = ".$_SESSION['id'];
 			$result = mysqli_query($db, $updatesql); 
 
 				$_SESSION['message'] = "Your new schedule is dated on" . $_POST['reschedDate'] . "at" . $_POST['reschedTime'];

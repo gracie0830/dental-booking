@@ -111,7 +111,7 @@
 
 	<p>
 		<label>Email Address</label><br>
-		<input type="text" name="email" class="in" required>
+		<input type="email" name="email" class="in" required>
 	</p>
 
 	<p class="pass">

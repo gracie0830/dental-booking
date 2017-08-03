@@ -848,7 +848,7 @@ h2{
     height: 380px;
 }
 
-#book-form h1{
+#book-form h1, #abook-form h1{
 	margin: 0;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 26px;
@@ -880,6 +880,38 @@ h2{
     padding: 10px 20px;
     font-size: 14px;
     color: #262262;
+}
+
+#abook-form{
+	background-image: url(images/sign-bg.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+#abook-form p {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #262262;
+}
+
+.abook-form{
+	width: 406px;
+	margin: 0 auto;
+}
+
+#abook-form .b-right{
+	width: 174px;
+}
+
+.abook-sub {
+    background-color: #1c75bc;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    width: 366px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .today{

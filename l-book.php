@@ -1,3 +1,5 @@
+<html !DOCTYPE HTML>
+<body id="reg">
 <?php
 	
         $title = "DenTEETH";
@@ -21,7 +23,7 @@
 			if ($today < $bookdate)
 			{
 				$sql = "INSERT INTO `appointments`(userID, reservationDateTime, schedDate, schedTime, service, status) VALUES
-				($userID,'$dttoday', '$bookdate', '$booktime', '$services', '')";
+				($userID,'$dttoday', '$bookdate', '$booktime', '$services', 'confirmed')";
 				$result = mysqli_query($db, $sql); 
 				header("location:l-appointment.php");  //redirect appointment page
 				//$_SESSION['username'] = $username;
@@ -33,11 +35,7 @@
 		}
 ?>
 
-<html !DOCTYPE HTML>
-<?php
-?>
 
-<body id="reg">
 	<div id="book-form">
 
 	<div class="book-form">
